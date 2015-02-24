@@ -15,6 +15,12 @@ function myLotto () {
 
 
     var num1 = Math.floor(Math.random() * 60);
+
+    while (num1 < 1) {
+
+        var num1 = Math.floor(Math.random() * 60);
+    }
+
     var num2 = Math.floor(Math.random() * 60);
     var num3 = Math.floor(Math.random() * 60);
     var num4 = Math.floor(Math.random() * 60);
