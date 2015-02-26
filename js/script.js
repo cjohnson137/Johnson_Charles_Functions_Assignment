@@ -14,48 +14,42 @@ var lottoType = "Powerball";
 //    }
 
 function myLotto (lottoType) {
+
     if (lottoType == "Florida Lotto") {
 
-        var num1 = Math.floor(Math.random() * 60);
 
-        while (num1 < 1) {
+        var num1 = Math.floor(Math.random() * 59) + 1;
 
-            var num1 = Math.floor(Math.random() * 60);
-        }
+        do {
+            var num2 = Math.floor(Math.random() * 59) + 1;
+        } while (num2 == num1)
 
-        var num2 = Math.floor(Math.random() * 60);
+        do {
 
-        while (num2 < 1) {
+            var num3 = Math.floor(Math.random() * 59) + 1;
 
-            var num2 = Math.floor(Math.random() * 60);
-        }
-        var num3 = Math.floor(Math.random() * 60);
+        } while (num3 == num2 || num3 == num1)
 
-        while (num3 < 1) {
+        do {
 
-            var num3 = Math.floor(Math.random() * 60);
-        }
-        var num4 = Math.floor(Math.random() * 60);
+            var num4 = Math.floor(Math.random() * 59) + 1;
 
-        while (num4 < 1) {
+        } while (num4 == num1 || num4 == num2 || num4 == num3)
 
-            var num4 = Math.floor(Math.random() * 60);
-        }
-        var num5 = Math.floor(Math.random() * 60);
+        do {
 
-        while (num5 < 1) {
+        var num5 = Math.floor(Math.random() * 59) + 1;
 
-            var num5 = Math.floor(Math.random() * 60);
-        }
+        } while (num5 == num1 || num5 == num2 || num5 == num3 || num5 == num4)
 
-        var num6 = Math.floor(Math.random() * 60);
+        do {
 
-        while (num6 < 1) {
+        var num6 = Math.floor(Math.random() * 59) + 1;
 
-            var num6 = Math.floor(Math.random() * 60);
-        }
+        } while (num6 == num1 || num6 == num2 || num6 == num3 || num6 == num4 || num6 == num5)
 
-        console.log("The winning numbers of the " + lottoType + " are....")
+
+        console.log("The winning numbers of the " + lottoType + " are....");
         console.log("1st Ball: " + num1);
         console.log("2nd Ball: " + num2);
         console.log("3rd Ball: " + num3);
@@ -68,71 +62,49 @@ function myLotto (lottoType) {
 
 
 
-        var num1 = Math.floor(Math.random() * 60);
+        var num1 = Math.floor(Math.random() * 59) + 1;
 
-        while (num1 < 1) {
+        do {
 
-            var num1 = Math.floor(Math.random() * 60);
-        }
+            var num2 = Math.floor(Math.random() * 59) + 1;
 
-        var num2 = Math.floor(Math.random() * 60);
-
-        while (num2 < 1) {
+        } while (num2 == num1)
 
 
-            while (num2 == num1) {
+            do {
+
+                var num3 = Math.floor(Math.random() * 59) + 1;
+
+            } while (num3 == num2 || num3 == num1)
 
 
-            }
+                do {
 
-            If  (num2 == num1)
+                    var num4 = Math.floor(Math.random() * 59) + 1;
 
-            var num2 = Math.floor(Math.random() * 60);
-        } else
-        {
+                } while (num4 == num1 || num4 == num2 || num4 == num3)
 
-        }
-    }
-    var num3 = Math.floor(Math.random() * 60);
 
-    while (num3 < 1) {
-        while (num3 == num1 || num3 == num2) {
+                    do {
 
-            var num3 = Math.floor(Math.random() * 60);
-        } else {
+                        var num5 = Math.floor(Math.random() * 59) + 1;
 
-        }
-    }
-    var num4 = Math.floor(Math.random() * 60);
+                    } while (num5 == num1 || num5 == num2 || num5 == num3 || num5 == num4)
 
-    while (num4 < 1) {
+                        do {
 
-        while (num4 == num1 || num3 == num2 || num3) {
+                            var powerBall = Math.floor(Math.random() * 35) + 1;
 
-            var num4 = Math.floor(Math.random() * 60);
+                        } while (powerBall == num1 || powerBall == num2 || powerBall == num3 || powerBall == num4 || powerBall == num5)
 
-        }
-        var num5 = Math.floor(Math.random() * 60);
 
-        while (num5 < 1) {
-
-            var num5 = Math.floor(Math.random() * 60);
-        }
-
-        var powerBall = Math.floor(Math.random() * 36);
-
-        while (powerBall < 1) {
-
-            var powerBall = Math.floor(Math.random() * 36);
-        }
-
-        console.log("The winning numbers of the " + lottoType + " are....")
-        console.log("Ball 1: " + num1);
-        console.log("Ball 2: " + num2);
-        console.log("Ball 3: " + num3);
-        console.log("Ball 4: " + num4);
-        console.log("Ball 5: " + num5);
-        console.log("and the POWERBALL is............... " + powerBall);
+    console.log("The winning numbers of the " + lottoType + " are....")
+    console.log("Ball 1: " + num1);
+    console.log("Ball 2: " + num2);
+    console.log("Ball 3: " + num3);
+    console.log("Ball 4: " + num4);
+    console.log("Ball 5: " + num5);
+    console.log("and the POWERBALL is............... " + powerBall);
 
 
     } else {
@@ -141,5 +113,6 @@ function myLotto (lottoType) {
         console.log("No money for you, you aren't playing a real lottery.")
 
     }
+}
 
 myLotto(lottoType);
